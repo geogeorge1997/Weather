@@ -1,0 +1,296 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.style.css">
+<style>
+
+body,h1{
+color:white;
+background:#134;
+font-family: "Raleway", sans-serif
+}
+
+h3{
+text-align:center;
+}
+
+.button {
+width:97.2px;
+  background-color: #4CAF50; /* Green */
+  border: 3px solid #4CAF50;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.button2 {background-color: #008CBA;
+border: 3px solid #008CBA;} /* Blue */
+.button3 {background-color: #f44336;
+border: 3px solid #f44336;} /* Red */
+
+.hcolo
+{
+background:#134;
+color:#134;
+}
+
+.hcolo1
+{
+
+color:white;
+}
+
+div.scrollmenu {
+background:lime;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu ab {
+  display: inline-block;
+
+}
+
+.container {
+box-shadow: 0 0 5px rgba(240, 230, 230, 1);
+border: 3px solid rgba(240, 230, 230, 1);
+    width:360px;
+
+    position:relative;
+    background-color: #134;
+    white-space: overflow
+}
+
+.card-box {
+box-shadow: 0 0 5px rgba(240, 23, 230, 1);
+border: 3px solid rgba(240, 23, 230, 1);
+
+    margin-left:10px;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-right:10px;
+    width:95%;
+
+    background: linear-gradient(to bottom left, #0099cc 0%, #99ccff 100%);
+    position:relative;
+}
+
+.card-box .img{
+    width:125px;
+    height:125px;
+    background-size:cover;
+    position:absolute;
+    left:45%;
+    transform:translateY(53%);
+    border-radius:50%;
+    border:4px solid white;
+}
+
+.card-box h1{
+    color:white;
+    font-family: arial;
+    }
+
+.box-container{
+    width:90%;
+    margin-top:58px;
+    padding:60px 5% 10px 5%;
+    text-align:center;
+    background-color:#fffa;
+}
+
+.box-container h5,.box-container h3{
+    font-family:Arial;
+}
+
+.icon-temp {
+    height:40px;
+    margin-right:8px;
+    padding:1px 1px;
+    float:right;
+    width:64%;
+    color:#fffdd0;
+    text-align:left;
+    font-size:20px;
+
+    }
+
+.icon-list-new {
+
+    height:80px;
+    margin-left:5px;
+    margin-top:0px;
+    padding:1px 1px;
+    float:left;
+    width:30%;
+    color:#fffdd0;
+    text-align:left;
+    font-size:20px;
+    }
+
+.icon-list {
+
+    height:80px;
+    margin-left:5px;
+    margin-right:250px;
+    padding:1px 1px;
+    float:left;
+    width:30%;
+    color:#fffdd0;
+    text-align:left;
+    font-size:20px;
+    white-space: overflow
+    }
+
+.sum{
+
+    margin-top:75%;
+    }
+
+    .text-a {
+box-shadow: 0 0 6px rgba(81, 203, 238, 1);
+border: 3px solid rgba(81, 203, 238, 1);
+resize: none;
+outline:none;
+    text-align: justify;
+    white-space: pre-line;
+    -moz-text-align-last: left;
+    text-align-last: left;
+font-size: 25px;
+font-family:Arial;
+color:white;
+padding:1px;
+background: linear-gradient(to bottom left, #0099cc 0%, #99ccff 100%);
+ }
+
+.text-b {
+box-shadow: 0 0 6px rgba(81, 203, 238, 1);
+border: 3px solid rgba(81, 203, 238, 1);
+resize: none;
+    text-align: center;
+    white-space: pre-line;
+    -moz-text-align-last: left;
+    text-align-last: left;
+font-size: 25px;
+font-family:Arial;
+color:white;
+background: linear-gradient(to bottom left, #0099cc 0%, #99ccff 100%);
+ }
+
+</style>
+</head>
+<body>
+
+
+<!-- Sidebar/menu -->
+
+<nav  class="w3-sidebar w3-collapse w3-light-grey w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu" >
+      <i class="fa fa-remove"></i>
+    </a>
+  </div>
+
+      <div class="w3-row-padding" style="margin:0 -16px;">
+        <div class="w3-col">
+        </div>
+      </div>
+
+
+    <div class="col-6 col-s-12 menu">
+            <form action="c_Name" method="post">
+                {% csrf_token %}
+                <input type="text" id="loc1" name="l1" class="w3-input w3-border"  placeholder="City Name">
+                <input type="submit" name="now" class="button tablink" value="@ Now">
+                <input type="submit" name="hour" class="button button2 tablink" value="24 Hour" >
+                <input type="submit" name="day" class="button button3 tablink" value="7 Day">
+            </form>
+    </div>
+   <div class="col-6 col-s-12 menu">
+            <form action="ll_Name" method="post">
+                {% csrf_token %}
+                <input type="text" id="loc2" name="l2" class="w3-input w3-border"  placeholder="Latitude, Longitde">
+                <input type="submit" name="now" class="button tablink" value="@ Now">
+                <input type="submit" name="hour" class="button button2 tablink" value="24 Hour" >
+                <input type="submit" name="day" class="button button3 tablink" value="7 Day">
+            </form>
+    </div>
+
+    <h1>Weather</h1>
+
+</nav>
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+
+<div class="scrollmenu">
+
+
+{% for i in lists %}
+
+    <div class="w3-third w3-container w3-margin-bottom">
+<div class="w4-container w4"><!--<div class="w4-container w4-green">-->
+        <div class="container">
+
+            <div class="card-box">
+                <center>
+                <textarea class="text-b" readonly="readonly" rows="2" cols="27">{{i.time}}</textarea>
+            </center>
+                <div class="icon-temp">
+                    <h3>{{i.icon}} {{i.temperature}}&deg</h3>
+                </div>
+                    <div class="icon-list-new">
+                        <h6>Feel Temp.</h6>
+                        <h3>{{i.appTemperature}}&deg</h3>
+                    </div>
+                    <div class="icon-list">
+                        <h6>Rain</h6>
+                        <h3>{{i.rainProb}}&#37</h3>
+                    </div>
+                    <div class="icon-list">
+                        <h6>UV Index.</h6>
+                        <h3>{{i.uvindex}}</h3>
+                    </div>
+                <div class="img" style="background-image:url({% static 'img/Image.png' %});"></div>
+                <div class="sum">
+                    <center>
+                    <textarea class="text-a" readonly="readonly" rows="3" cols="27">{{i.summary}}</textarea>
+                </center>
+                </div>
+            </div>
+
+    </div>
+    </div>
+
+
+        </div>
+</ab>
+
+
+    {% endfor %}
+
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+
+  </div>
+
+</div>
+
+
+
+</body>
+</html>
